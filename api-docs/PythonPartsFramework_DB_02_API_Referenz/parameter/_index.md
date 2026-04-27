@@ -1,0 +1,56 @@
+# API parameter
+
+| Dokument | Beschreibung |
+|---|---|
+| [PythonPartsFramework__GeneralScripts__BuildingElementParameterListUtil.py.md](../parameter/PythonPartsFramework__GeneralScripts__BuildingElementParameterListUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__BuildingElementParameterPropertyUtil.py.md](../parameter/PythonPartsFramework__GeneralScripts__BuildingElementParameterPropertyUtil.py.md) | Modul-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__HandleParameterData.py.md](../parameter/PythonPartsFramework__GeneralScripts__HandleParameterData.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__HandleParameterType.py.md](../parameter/PythonPartsFramework__GeneralScripts__HandleParameterType.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ParameterProperty.py.md](../parameter/PythonPartsFramework__GeneralScripts__ParameterProperty.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ParameterPropertyTyping.py.md](../parameter/PythonPartsFramework__GeneralScripts__ParameterPropertyTyping.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__Connections__ParameterConnectionImpl.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__Connections__ParameterConnectionImpl.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__Data__ParameterConnection.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__Data__ParameterConnection.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueType.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueType.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueTypes.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueTypes.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueTypesImpl.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueTypesImpl.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueValidator.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__ParameterPropertyValueValidator.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__ValueTypes__ValueTypeUtils__ParameterPropertyListUtil.py.md](../parameter/PythonPartsFramework__GeneralScripts__ValueTypes__ValueTypeUtils__ParameterPropertyListUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterInclude.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterInclude.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterReader.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterReader.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterReaderUtil.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterReaderUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterSectionReader.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterSectionReader.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterTextReader.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterTextReader.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterValueReader.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParameterValueReader.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__GeneralScripts__XMLReader__XmlParentParameterData.py.md](../parameter/PythonPartsFramework__GeneralScripts__XMLReader__XmlParentParameterData.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterIncludes__GeneralOpeningSymbolsProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__GeneralOpeningSymbolsProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__OpeningDoorSwingProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__OpeningDoorSwingProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__OpeningRevealProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__OpeningRevealProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__OpeningSillProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__OpeningSillProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__OpeningSymbolsProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__OpeningSymbolsProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__OpeningTierOffsetProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__OpeningTierOffsetProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__Reinforcement__DimensionLineProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__Reinforcement__DimensionLineProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__Reinforcement__LabelProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__Reinforcement__LabelProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__Reinforcement__TextPointerProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__Reinforcement__TextPointerProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__ShapeGeometryProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__ShapeGeometryProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__TextProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__TextProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterIncludes__VerticalOpeningGeometryProperties.incl.md](../parameter/PythonPartsFramework__ParameterIncludes__VerticalOpeningGeometryProperties.incl.md) | Konvertiert aus `.incl` |
+| [PythonPartsFramework__ParameterUtils__Architecture__ShapeGeometryPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__Architecture__ShapeGeometryPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__BasePropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__BasePropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__OpeningDoorSwingPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__OpeningDoorSwingPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__OpeningRevealPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__OpeningRevealPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__OpeningSillPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__OpeningSillPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__OpeningSymbolsPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__OpeningSymbolsPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__OpeningTierOffsetPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__OpeningTierOffsetPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__ProfileParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__ProfileParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__Reinforcement__DimensionLinePropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__Reinforcement__DimensionLinePropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__Reinforcement__LabelPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__Reinforcement__LabelPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__Reinforcement__TextPointerPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__Reinforcement__TextPointerPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__ShapeGeometryPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__ShapeGeometryPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__TextPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__TextPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__ParameterUtils__VerticalOpeningGeometryPropertiesParameterUtil.py.md](../parameter/PythonPartsFramework__ParameterUtils__VerticalOpeningGeometryPropertiesParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__TypeCollections__ElementConnectorParameterList.py.md](../parameter/PythonPartsFramework__TypeCollections__ElementConnectorParameterList.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__TypeCollections__ParameterValueList.py.md](../parameter/PythonPartsFramework__TypeCollections__ParameterValueList.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__Utils__General__BuildingElementParameterUtil.py.md](../parameter/PythonPartsFramework__Utils__General__BuildingElementParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__Utils__PythonPart__ModifyPythonPartParameterUtil.py.md](../parameter/PythonPartsFramework__Utils__PythonPart__ModifyPythonPartParameterUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__Utils__PythonPart__PythonPartParameterDataUtil.py.md](../parameter/PythonPartsFramework__Utils__PythonPart__PythonPartParameterDataUtil.py.md) | Klasse-Dokumentation aus Python |
+| [PythonPartsFramework__Utils__PythonPart__PythonPartParameterUtil.py.md](../parameter/PythonPartsFramework__Utils__PythonPart__PythonPartParameterUtil.py.md) | Klasse-Dokumentation aus Python |

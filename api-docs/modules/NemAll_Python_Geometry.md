@@ -1,0 +1,165 @@
+﻿# NemAll_Python_Geometry
+
+**Modul:** `NemAll_Python_Geometry`
+**Import:** `import NemAll_Python_Geometry as AllplanGeo`
+**Seit:** Allplan 2026
+**Status:** ✅ VERIFIED
+
+Verifizierter Klassenkatalog aus `api_reference/InterfaceStubs/NemAll_Python_Geometry/`.
+
+| Klasse | Status | Quelle |
+|---|---|---|
+| `Angle` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Angle/index.html` |
+| `AngleList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/AngleList/index.html` |
+| `ApproximationSettings` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ApproximationSettings/index.html` |
+| `Arc2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Arc2D/index.html` |
+| `Arc2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Arc2DList/index.html` |
+| `Arc3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Arc3D/index.html` |
+| `Arc3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Arc3DList/index.html` |
+| `Axis2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Axis2D/index.html` |
+| `Axis3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Axis3D/index.html` |
+| `AxisPlacement2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/AxisPlacement2D/index.html` |
+| `AxisPlacement2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/AxisPlacement2DList/index.html` |
+| `AxisPlacement3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/AxisPlacement3D/index.html` |
+| `AxisPlacement3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/AxisPlacement3DList/index.html` |
+| `BoundingBox2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BoundingBox2D/index.html` |
+| `BoundingBox2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BoundingBox2DList/index.html` |
+| `BRep3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BRep3D/index.html` |
+| `BRep3DBuilder` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BRep3DBuilder/index.html` |
+| `BRep3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BRep3DList/index.html` |
+| `BSpline2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSpline2D/index.html` |
+| `BSpline2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSpline2DList/index.html` |
+| `BSpline3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSpline3D/index.html` |
+| `BSpline3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSpline3DList/index.html` |
+| `BSpline3DService` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSpline3DService/index.html` |
+| `BSplineSurface3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSplineSurface3D/index.html` |
+| `BSplineSurface3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/BSplineSurface3DList/index.html` |
+| `CenterCalculus` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/CenterCalculus/index.html` |
+| `ChamferCalculus` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ChamferCalculus/index.html` |
+| `ClippedSweptSolid3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClippedSweptSolid3D/index.html` |
+| `ClippedSweptSolid3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClippedSweptSolid3DList/index.html` |
+| `ClosedArea2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedArea2D/index.html` |
+| `ClosedArea2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedArea2DList/index.html` |
+| `ClosedArea3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedArea3D/index.html` |
+| `ClosedArea3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedArea3DList/index.html` |
+| `ClosedAreaComposite2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedAreaComposite2D/index.html` |
+| `ClosedAreaComposite2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedAreaComposite2DList/index.html` |
+| `ClosedAreaComposite3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedAreaComposite3D/index.html` |
+| `ClosedAreaComposite3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ClosedAreaComposite3DList/index.html` |
+| `Clothoid2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Clothoid2D/index.html` |
+| `Clothoid2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Clothoid2DList/index.html` |
+| `Comparison` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Comparison/index.html` |
+| `ComparisonResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ComparisonResult/index.html` |
+| `Cone3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cone3D/index.html` |
+| `Cone3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cone3DList/index.html` |
+| `ConicalSurface3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ConicalSurface3D/index.html` |
+| `ConicalSurface3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ConicalSurface3DList/index.html` |
+| `Cuboid3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cuboid3D/index.html` |
+| `Cuboid3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cuboid3DList/index.html` |
+| `Cylinder3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cylinder3D/index.html` |
+| `Cylinder3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Cylinder3DList/index.html` |
+| `DivisionPoints` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/DivisionPoints/index.html` |
+| `eApproximationSettingsType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eApproximationSettingsType/index.html` |
+| `eBoolOpResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eBoolOpResult/index.html` |
+| `eBoxPoint` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eBoxPoint/index.html` |
+| `eClothoidType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eClothoidType/index.html` |
+| `eComparisionResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eComparisionResult/index.html` |
+| `eCoordIdentification` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eCoordIdentification/index.html` |
+| `eCreatePatchResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eCreatePatchResult/index.html` |
+| `eFilletErrorCode` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eFilletErrorCode/index.html` |
+| `eFilletType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eFilletType/index.html` |
+| `eGeometryErrorCode` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eGeometryErrorCode/index.html` |
+| `eHiddenCalculationResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eHiddenCalculationResult/index.html` |
+| `eLinePointIdentification` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eLinePointIdentification/index.html` |
+| `Ellipsoid3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Ellipsoid3D/index.html` |
+| `Ellipsoid3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Ellipsoid3DList/index.html` |
+| `EndPointType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/EndPointType/index.html` |
+| `ePlanarSurfaceError` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ePlanarSurfaceError/index.html` |
+| `ePolygonHealingSettings` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ePolygonHealingSettings/index.html` |
+| `ePolygonNormalizeType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ePolygonNormalizeType/index.html` |
+| `ePolyhedronHealingSettings` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ePolyhedronHealingSettings/index.html` |
+| `eProjectionMatrixType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eProjectionMatrixType/index.html` |
+| `eServiceResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eServiceResult/index.html` |
+| `eSplitResult` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eSplitResult/index.html` |
+| `eSurfaceTrimParam` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eSurfaceTrimParam/index.html` |
+| `eUniteMode` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eUniteMode/index.html` |
+| `eValidationStatusPolygon3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/eValidationStatusPolygon3D/index.html` |
+| `ExtrudedAreaSolid3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ExtrudedAreaSolid3D/index.html` |
+| `ExtrudedAreaSolid3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/ExtrudedAreaSolid3DList/index.html` |
+| `FaceOffset` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/FaceOffset/index.html` |
+| `FilletCalculus2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/FilletCalculus2D/index.html` |
+| `FilletCalculus3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/FilletCalculus3D/index.html` |
+| `GeometryEdge` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/GeometryEdge/index.html` |
+| `GeometryEdgeList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/GeometryEdgeList/index.html` |
+| `HealingSettings` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/HealingSettings/index.html` |
+| `HiddenCalculationParameters` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/HiddenCalculationParameters/index.html` |
+| `HiddenCalculus` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/HiddenCalculus/index.html` |
+| `HiddenMaterial` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/HiddenMaterial/index.html` |
+| `IntersectionRayBRep` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/IntersectionRayBRep/index.html` |
+| `IntersectionRayPolyhedron` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/IntersectionRayPolyhedron/index.html` |
+| `IntersectRayPolyhedronFlag` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/IntersectRayPolyhedronFlag/index.html` |
+| `Kanten_t` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Kanten_t/index.html` |
+| `Line2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Line2D/index.html` |
+| `Line2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Line2DList/index.html` |
+| `Line3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Line3D/index.html` |
+| `Line3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Line3DList/index.html` |
+| `LineHelpConstruction` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/LineHelpConstruction/index.html` |
+| `Matrix2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Matrix2D/index.html` |
+| `Matrix3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Matrix3D/index.html` |
+| `Matrix3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Matrix3DList/index.html` |
+| `MinMax2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/MinMax2D/index.html` |
+| `MinMax2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/MinMax2DList/index.html` |
+| `MinMax3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/MinMax3D/index.html` |
+| `Offset3DPlane` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Offset3DPlane/index.html` |
+| `OrientedEdge` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/OrientedEdge/index.html` |
+| `OrientedEdgeList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/OrientedEdgeList/index.html` |
+| `Path` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Path/index.html` |
+| `Path2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Path2D/index.html` |
+| `Path2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Path2DList/index.html` |
+| `Path3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Path3D/index.html` |
+| `Path3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Path3DList/index.html` |
+| `PathIterator` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PathIterator/index.html` |
+| `PerpendicularCalculus` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PerpendicularCalculus/index.html` |
+| `Plane3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Plane3D/index.html` |
+| `Point2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Point2D/index.html` |
+| `Point2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Point2DList/index.html` |
+| `Point3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Point3D/index.html` |
+| `Point3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Point3DList/index.html` |
+| `Polygon2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polygon2D/index.html` |
+| `Polygon2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polygon2DList/index.html` |
+| `Polygon2DUtil` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polygon2DUtil/index.html` |
+| `Polygon3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polygon3D/index.html` |
+| `Polygon3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polygon3DList/index.html` |
+| `PolygonalArea` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolygonalArea/index.html` |
+| `PolygonalArea2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolygonalArea2D/index.html` |
+| `PolygonalArea2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolygonalArea2DList/index.html` |
+| `PolygonalArea3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolygonalArea3D/index.html` |
+| `PolygonalArea3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolygonalArea3DList/index.html` |
+| `Polyhedron3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyhedron3D/index.html` |
+| `Polyhedron3DBuilder` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyhedron3DBuilder/index.html` |
+| `Polyhedron3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyhedron3DList/index.html` |
+| `PolyhedronFace` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolyhedronFace/index.html` |
+| `PolyhedronType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolyhedronType/index.html` |
+| `PolyhedronUtil` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolyhedronUtil/index.html` |
+| `Polyline2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyline2D/index.html` |
+| `Polyline2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyline2DList/index.html` |
+| `Polyline2DUtil` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyline2DUtil/index.html` |
+| `Polyline3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyline3D/index.html` |
+| `Polyline3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Polyline3DList/index.html` |
+| `PolyPoints2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolyPoints2D/index.html` |
+| `PolyPoints3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/PolyPoints3D/index.html` |
+| `Spline2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Spline2D/index.html` |
+| `Spline2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Spline2DList/index.html` |
+| `Spline3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Spline3D/index.html` |
+| `Spline3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Spline3DList/index.html` |
+| `SweepRotationType` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/SweepRotationType/index.html` |
+| `TangentCalculus` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/TangentCalculus/index.html` |
+| `TransformCoord` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/TransformCoord/index.html` |
+| `Vector2D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Vector2D/index.html` |
+| `Vector2DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Vector2DList/index.html` |
+| `Vector3D` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Vector3D/index.html` |
+| `Vector3DList` | ✅ VERIFIED | `api_reference/InterfaceStubs/NemAll_Python_Geometry/Vector3DList/index.html` |
+
+⚠️ Hinweise:
+- Diese Datei erfasst den verifizierten Klassenbestand des Moduls.
+- Methoden-/Signaturdetails muessen pro Klasse aus der jeweiligen Klassenseite extrahiert werden.

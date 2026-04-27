@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Element>
+  <Script>
+    <Name>standard_template.py</Name>
+    <Title>Standard Template</Title>
+    <Version>1.0</Version>
+    <Interactor>False</Interactor>
+    <ReadLastInput>True</ReadLastInput>
+  </Script>
+  <Page>
+    <Name>Main</Name>
+    <Text>Main</Text>
+    <Parameters>
+      <Parameter>
+        <Name>Length</Name>
+        <Text>Length</Text>
+        <Value>1000</Value>
+        <ValueType>Length</ValueType>
+        <MinValue>10</MinValue>
+      </Parameter>
+      <Parameter>
+        <Name>Width</Name>
+        <Text>Width</Text>
+        <Value>500</Value>
+        <ValueType>Length</ValueType>
+        <MinValue>10</MinValue>
+      </Parameter>
+      <Parameter>
+        <Name>Height</Name>
+        <Text>Height</Text>
+        <Value>2500</Value>
+        <ValueType>Length</ValueType>
+        <MinValue>10</MinValue>
+      </Parameter>
+    </Parameters>
+  </Page>
+</Element>

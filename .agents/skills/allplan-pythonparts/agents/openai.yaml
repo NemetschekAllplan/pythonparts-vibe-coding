@@ -1,0 +1,4 @@
+﻿display_name: "Allplan PythonParts Builder"
+short_description: "Generate Allplan 2026 PythonParts with verified API patterns"
+default_prompt: "Create an Allplan PythonPart that..."
+invocation: "implicit"
