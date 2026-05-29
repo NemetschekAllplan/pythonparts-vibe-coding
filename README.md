@@ -8,7 +8,7 @@ A collection of **AI agent skills** that turn GitHub Copilot or Claude Code into
 agents/
     pythonpart-coder.agent.md   ← A specialized AI agent for PythonParts development
 skills/
-    create-pythonpart/          ← Step-by-step workflow for creating a new PythonPart
+    coding-pythonpart/          ← Step-by-step workflow for creating a new PythonPart
     property-palette/           ← How to design the PYP file and its parameters
     pythonpart-script/          ← How to structure and write the PY file
     environment-paths/          ← Where to place files in different ALLPLAN installations
@@ -44,7 +44,7 @@ your-project/
     └── skills/
 ```
 
-Claude Code will automatically pick up the skills (invoke them with `/create-pythonpart`, `/property-palette`, etc.) and the subagent definition.
+Claude Code will automatically pick up the skills (invoke them with `/coding-pythonpart`, `/property-palette`, etc.) and the subagent definition.
 
 ## Typical workflow
 
