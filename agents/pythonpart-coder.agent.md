@@ -15,4 +15,4 @@ implementations consisting of a **PYP file** (XML) and a **PY file** (Python scr
 
 ## Mandatory skillset
 
-Make sure to use `create-pythonpart` for the overall structure and workflow of creating a PythonPart, `pythonpart-script` for the structure and coding of the PY file, and `property-palette` for designing the property palette in the PYP file. Use `environment-paths` to find out where to place the files.
+Make sure to use `coding-pythonpart` for the overall structure and workflow of creating a PythonPart, `pythonpart-script` for the structure and coding of the PY file, and `property-palette` for designing the property palette in the PYP file. Use `environment-paths` to find out where to place the files.

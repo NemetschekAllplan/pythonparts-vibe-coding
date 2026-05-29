@@ -1,5 +1,5 @@
 ---
-name: create-pythonpart
+name: coding-pythonpart
 description: >
   Step-by-step workflow for creating a PythonPart using the Script Object contract.
   Use this skill whenever the user asks to create, build, or scaffold a new PythonPart.
