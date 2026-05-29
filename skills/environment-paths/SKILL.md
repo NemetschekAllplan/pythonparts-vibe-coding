@@ -7,18 +7,19 @@ description: >
 
 ## Overview
 
-### `prg`
+All the paths should already be part of the user's workspace. If they are not, the `etc` and `prg` paths can be read from the registry as an emergency fallback (see `instructions/establishing-paths.md`). There is no easy way to find out the `std` and `usr` paths if they are not in the workspace, so you may need to ask the user to provide them manually in that case.
 
-The path with ALLPLAN binaries; DO NOT use it for placing any files, as it is read-only; stored in registry under `HKEY_LOCAL_MACHINE\SOFTWARE\NEMETSCHEK\ALLPLAN\<ALLPLAN_VERSION>\InstallRoot`, in entries `ProgramDataDrive` with the drive letter and `ProgramDataPath` with the path. Replace `<ALLPLAN_VERSION>` with the actual version, e.g. `2025.0`.
+### `prg`
+The path with ALLPLAN binaries. **Read-only** — do not place files here.
 
 ### `etc`
-The path with ALLPLAN resources (other than binaries); DO NOT use it for placing any files, as it is read-only; you can read files from here; The **parent folder** of the `etc` path is stored in registry under `HKEY_LOCAL_MACHINE\SOFTWARE\NEMETSCHEK\ALLPLAN\<ALLPLAN_VERSION>\InstallRoot`, in entries `DataDrive` with the drive letter and `DataPath` with the path. Replace `<ALLPLAN_VERSION>` with the actual version, e.g. `2025.0`.
+The path with ALLPLAN resources. **Read-only** — do not place files here, but you can read files from it.
 
 ### `std`
-The path for office-wide resources; files placed here are available for all users in the office; not stored in registry, you have to ask the user or infer it from the workspace paths; usually `c:\Data\Allplan\Allplan <ALLPLAN_VERSION>\Std\`
+The path for office-wide resources. Files placed here are available for all users. Usually: `c:\Data\Allplan\Allplan <ALLPLAN_VERSION>\Std\`, but it can also be on a network drive.
 
 ### `usr`
-The path for user-specific resources; files placed here are available only for the current user; also not stored in registry, you have to ask the user or infer it from the workspace paths; usually `C:\Users\<username>\Documents\Nemetschek\ALLPLAN\<ALLPLAN_VERSION>\Usr\<allplan_username>\`; `allplan_username` can be `local`
+The path for user-specific resources. Files placed here are available only for the current user. Usually: `C:\Users\<username>\Documents\Nemetschek\ALLPLAN\<ALLPLAN_VERSION>\Usr\<allplan_username>\`, but it can also be on a network drive.
 
 ## Where to put PYP and PY files
 
@@ -43,4 +44,13 @@ PY files should be put in the `PythonPartsScripts\` subfolder in either `std` or
 
 Framework files are stored in the `PythonPartsFramework\` sub-folder of the `etc` path:
 
-- `PythonPartsFramework\InterfaceStubs` contain stub files with python signatures for ALLPLAN API; look here when you need to find out how to call a certain ALLPLAN function, or what parameters it requires; 
+- `PythonPartsFramework\InterfaceStubs` contain stub files with python signatures for ALLPLAN API; look here when you need to find out how to call a certain ALLPLAN function, or what parameters it requires; You won't find the actual implementation here, but the stubs are usually enough to work with ALLPLAN API in your PythonPart.
+- `PythonPartsFramework\GeneralScript` contains the python layer of the framework; Unfortunately, it contains both internal code of the framework and classes and functions that are meant to be used in the PythonPart scripts;
+- `PythonPartsFramework\Utils` contains exclusively classes helpful for PythonPart development; these are the files you want to check first when looking for helper functions to work with ALLPLAN data structures, geometry, or the property palette parameters.
+
+## Examples
+
+A comprehensive collection of example PythonParts can be found on GitHub:
+`https://github.com/NemetschekAllplan/PythonPartsExamples/tree/<ALLPLAN_VERSION>` (replace `<ALLPLAN_VERSION>` with the actual version, e.g. `2025` or `2026`). The PYP files are in the `Library/Examples/PythonParts` directory, and the PY files are in the `PythonPartsExampleScripts` directory.
+
+Ideally, the user has downloaded these examples with a dedicated tool - look for them in the `usr\` path.
