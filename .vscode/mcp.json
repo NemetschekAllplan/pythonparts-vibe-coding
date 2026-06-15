@@ -1,0 +1,12 @@
+{
+	"servers": {
+		"ALLPLAN-mcp-server-vibe-coding": {
+			"type": "stdio",
+			"command": "python",
+			"args": [
+				"MCP\\mcp_server.py"
+			]
+		}
+	},
+	"inputs": []
+}
