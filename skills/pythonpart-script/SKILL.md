@@ -1,19 +1,15 @@
 ---
 name: pythonpart-script
-description: >
-  Use this skill when writing python code for a PythonPart. It covers the structure of the script,
-  the Script Object contract, coding rules, and how to add input steps.
+description: Use this skill when writing python code for a PythonPart. It covers the structure of the script, the Script Object contract, coding rules, and how to add input steps.
 ---
 
 # Skill: PythonPart Script
 
 ## How the framework loads your script
 
-The framework **never runs your script top-to-bottom**. It loads it as a Python module and then
-calls specific functions or methods from it. This means:
+> **Important:** The framework never runs your script top-to-bottom. It loads it as a Python module and calls specific functions or methods from it. Do **not** put executable logic at module level — only imports, function definitions, and class definitions.
 
-- Do **not** put executable logic at module level — only imports, function definitions, and class definitions.
-- The framework is the caller. Your job is to implement the functions/methods/classes it expects.
+The framework is the caller. Your job is to implement the functions/methods/classes it expects.
 
 ## Script Object contract
 
@@ -32,11 +28,10 @@ See `templates/EntryPointFunctions.py` for a ready-to-copy file containing only 
 ## Coding rules
 
 - `check_allplan_version` and `create_script_object` are **module-level functions**, not methods.
-- The script object class **must** inherit from `BaseScriptObject`.
-- `execute()` is the **only mandatory method** to override. It must return `CreateElementResult`.
+- The script object class **must** inherit from `BaseScriptObject.BaseScriptObject`.
+- `execute()` is the **only mandatory method** to override. It must return `CreateElementResult.CreateElementResult`.
 - Access parameter values via `self.build_ele.<ParameterName>.value`. The name must match the `<Name>` tag in the PYP file.
-- Use `TYPE_CHECKING` guard for `BuildingElement` import — it is only needed for type hints, not at runtime.
-- `AllplanGeometry` and `AllplanBasisElements` in the template are just examples. Remove them if not needed or add others as required - see 
+- `AllplanGeometry` and `AllplanBasisElements` in the template are just examples. Remove them if not needed or add others as required — see `etc\PythonPartsFramework\InterfaceStubs` for all available API modules.
 - Never instantiate `DocumentAdapter` and `CoordinateInput` directly — use the ones provided by the framework via `self.document` and `self.coord_input`.
 
 ## Adding input steps
@@ -105,3 +100,18 @@ The framework calls `execute()` only after all input steps are finished.
 | `start_input()` | after palette closes, before `execute()` | launch first interaction step |
 | `start_next_input()` | after each interaction step completes | launch next step or set interactor to `None` |
 
+## Checklist before handing off
+
+- [ ] Every parameter used like `build_ele.Width` exists in the PYP file as `<Parameter>` with `<Name>Width</Name>`
+- [ ] `execute()` returns `CreateElementResult`
+- [ ] No logic runs at module level (imports and function/class definitions only)
+- [ ] `check_allplan_version` and `create_script_object` are present as module-level functions of the module referenced in `<Script>/<Name>` in the PYP file
+- [ ] The class, whose instance is returned by `create_script_object()`, inherits from `BaseScriptObject.BaseScriptObject`
+
+---
+
+## Related guides
+
+- [Property Palette (UI Design)](skill://ui-design) — defining parameters in the PYP file that the script reads via `build_ele`
+- [ALLPLAN Elements](skill://allplan-elements) — how to create geometry and wrap it in `AllplanElement` objects for `CreateElementResult.CreateElementResult`
+- [Create a New PythonPart](skill://create-new-pythonpart) — end-to-end workflow

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <Element
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-    xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/2026/schemas/PythonPart.xsd">
+    xsi:noNamespaceSchemaLocation="https://pythonparts.allplan.com/{ALLPLAN_VERSION}/schemas/PythonPart.xsd">
 
     <Script>
         <Name>MyPythonParts\MyPythonPart.py</Name>

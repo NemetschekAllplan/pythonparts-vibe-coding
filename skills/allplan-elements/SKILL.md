@@ -3,6 +3,8 @@ name: allplan-elements
 description: This skill provides the foundational knowledge and high-level principles for defining native ALLPLAN elements (such as walls, lines, solids) within the ALLPLAN PythonParts framework.
 ---
 
+# Skill: ALLPLAN Elements
+
 ## High-Level Principles
 
 ### 1. `AllplanElement` Base Class
@@ -17,17 +19,15 @@ The API specializes `AllplanElement` into distinct branches:
 
 ### 2. Composition Over Inheritance (Geometry vs. Element)
 
-A critical insight into the ALLPLAN API is that ALLPLAN entities **compose** geometry. They are not purely geometrical entities themselves.
-
-It is not enough to define pure geometry (such as `Point3D`, `Line2D`, `Polyhedron3D`, or `BRep3D`). An element represents how that geometry should be processed and rendered in ALLPLAN.
+> **Key insight:** ALLPLAN entities **compose** geometry — they do not *are* geometry. Pure geometry objects (`NemAll_Python_Geometry.Point3D`, `NemAll_Python_Geometry.Line2D`, `NemAll_Python_Geometry.Polyhedron3D`, `NemAll_Python_Geometry.BRep3D`) carry only spatial coordinates. They have no color, no pen, no layer, and cannot be placed in a drawing file on their own. Every piece of geometry must be wrapped in an `AllplanElement` before it can exist in the model.
 For example:
-- A wall (`WallElement`) **has** a geometry acting as its axis (usually a `Line2D` or `Arc2D`).
-- A generic 3D solid (`ModelElement3D`) **has** a geometry defined as a `Polyhedron3D` or `BRep3D`.
-- A simple 2D line (`ModelElement2D`) **has** a geometry object defined as just a `Line2D`.
+- A wall (`NemAll_Python_ArchElements.WallElement`) **has** a geometry acting as its axis (usually a `NemAll_Python_Geometry.Line2D` or `NemAll_Python_Geometry.Arc2D`).
+- A generic 3D solid (`NemAll_Python_BasisElements.ModelElement3D`) **has** a geometry defined as a `NemAll_Python_Geometry.Polyhedron3D` or `NemAll_Python_Geometry.BRep3D`.
+- A simple 2D line (`NemAll_Python_BasisElements.ModelElement2D`) **has** a geometry object defined as just a `NemAll_Python_Geometry.Line2D`.
 
 Where geometry only handles spatial coordinates, the encapsulating **AllplanElement** defines specific components:
-- **`CommonProperties`**: Defines the visual format representation (pen, stroke, color, layer).
-- **Dedicated Property Classes**: An element typically pairs with property objects specific to its function (e.g., an `ArchElement` like `WallElement` uses `WallProperties` and `WallTierProperties` to handle thickness, tiers, and planes).
+- **`NemAll_Python_BaseElements.CommonProperties`**: Defines the visual format representation (pen, stroke, color, layer).
+- **Dedicated Property Classes**: An element typically pairs with property objects specific to its function (e.g., an `ArchElement` like `NemAll_Python_ArchElements.WallElement` uses `NemAll_Python_ArchElements.WallProperties` and `NemAll_Python_ArchElements.WallTierProperties` to handle thickness, tiers, and planes).
 
 **Example: Creating a simple cuboid**
 
@@ -47,7 +47,7 @@ model_element.GeometryObject   = cuboid_geometry
 model_element.CommonProperties = AllplanSettings.AllplanGlobalSettings.GetCurrentCommonProperties()
 ```
 
-`cuboid_geometry` is just a shape in space — no color, no pen, no layer. Only after it is assigned to `ModelElement3D` does it become a proper ALLPLAN element that can be placed in the drawing file.
+`cuboid_geometry` is just a shape in space — no color, no pen, no layer. Only after it is assigned to `NemAll_Python_BasisElements.ModelElement3D` does it become a proper ALLPLAN element that can be placed in the drawing file.
 
 
 ## Defining Specific Objects
@@ -56,6 +56,13 @@ Due to this framework architecture, defining objects always separates the logic 
 
 Detailed instructions for each element category are in the following articles:
 
-- **[Basis Elements](how-tos/basis-element.md)** — Generic drafting and modelling elements: 2D/3D lines, solids, text, hatchings, dimension lines. Covers which API class and geometry type to use for each ALLPLAN element.
-- **[Library Elements](how-tos/library-element.md)** — Symbols, smart symbols, and fixtures from the ALLPLAN library. Covers path-based construction and how to attach them to a PythonPart.
-- **[PythonPart Element](how-tos/pythonpart.md)** — Parametric containers built with `PythonPartUtil`. Covers views, placement matrix, attributes, hierarchy (structured PythonParts, child elements, groups), and key gotchas.
+- **[Basis Elements](references/basis-element.md)** — Generic drafting and modelling elements: 2D/3D lines, solids, text, hatchings, dimension lines. Covers which API class and geometry type to use for each ALLPLAN element.
+- **[Library Elements](references/library-element.md)** — Symbols, smart symbols, and fixtures from the ALLPLAN library. Covers path-based construction and how to attach them to a PythonPart.
+- **[PythonPart Element](references/pythonpart.md)** — Parametric containers built with `PythonPartUtil`. Covers views, placement matrix, attributes, hierarchy (structured PythonParts, child elements, groups), and key gotchas.
+
+---
+
+## Related guides
+
+- [PythonPart Script](skill://pythonpart-script) — how to return elements from `execute()` using `CreateElementResult.CreateElementResult`
+- [Create a New PythonPart](skill://create-new-pythonpart) — end-to-end workflow

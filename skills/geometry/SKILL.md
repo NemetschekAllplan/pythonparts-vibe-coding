@@ -1,11 +1,11 @@
 ---
 name: geometry
-description: Principles and techniques for creating and manipulating geometry using ALLPLAN's geometry engine (NemAll_Python_Geometry module).
+description: Use this skill for creating and manipulating geometry using ALLPLAN's geometry engine (NemAll_Python_Geometry module).
 ---
 
 ## Overview
 
-All geometry in ALLPLAN PythonParts is constructed using the `NemAll_Python_Geometry` module (aliased as `AllplanGeo`):
+All geometry in ALLPLAN PythonParts is constructed using the `NemAll_Python_Geometry` module (aliased as `AllplanGeo` or `AllplanGeometry`):
 
 ```python
 import NemAll_Python_Geometry as AllplanGeo
@@ -70,16 +70,16 @@ err, polyhedron = AllplanGeo.CreatePolyhedron(solid)
 
 Load these on demand based on the task:
 
-- [**how-tos/geometry-objects.md**](how-tos/geometry-objects.md) — Constructing geometry primitives and curves (Point, Vector, Angle, Line, Arc, Polyline, Polygon, Spline, Axis, AxisPlacement, Plane)
-- [**how-tos/basic-solids.md**](how-tos/basic-solids.md) — Creating basic 3D solids (cuboid, cylinder, cone, sphere) as Polyhedron or BRep
-- [**how-tos/extrusion.md**](how-tos/extrusion.md) — Extruding profiles vertically or along a vector
-- [**how-tos/sweep.md**](how-tos/sweep.md) — Sweeping profiles along a path or rails
-- [**how-tos/revolve-loft.md**](how-tos/revolve-loft.md) — Creating solids by revolving or lofting profiles
-- [**how-tos/build-from-scratch.md**](how-tos/build-from-scratch.md) — Building BRep or Polyhedron from scratch (BRep3DBuilder, Polyhedron3DBuilder)
-- [**how-tos/boolean-operations.md**](how-tos/boolean-operations.md) — Union, subtraction, and intersection of solids
-- [**how-tos/intersections.md**](how-tos/intersections.md) — Calculating geometric intersections (curve-curve, curve-plane, solid-solid, solid-plane, ray-solid)
-- [**how-tos/transformations.md**](how-tos/transformations.md) — Translation, rotation, scaling, reflection, projection, and composing transformations
-- [**how-tos/fillet-offset.md**](how-tos/fillet-offset.md) — Fillet edges/lines and offset curves/faces
-- [**how-tos/measurement.md**](how-tos/measurement.md) — Length, area, volume calculation, center of gravity, comparison, and polyhedron validation/repair
-- [**how-tos/hidden-calculation.md**](how-tos/hidden-calculation.md) — Projecting 3D geometry to 2D lines (visible/hidden edges)
-- [**how-tos/tessellation.md**](how-tos/tessellation.md) — Converting BRep to Polyhedron via tessellation
+- [Geometry objects](references/geometry-objects.md) — Constructing geometry primitives and curves (Point, Vector, Angle, Line, Arc, Polyline, Polygon, Spline, Axis, AxisPlacement, Plane)
+- [Basic solids](references/basic-solids.md) — Creating basic 3D solids (cuboid, cylinder, cone, sphere) as Polyhedron or BRep
+- [Extrusion](references/extrusion.md) — Extruding profiles vertically or along a vector
+- [Sweep](references/sweep.md) — Sweeping profiles along a path or rails
+- [Revolve & Loft](references/revolve-loft.md) — Creating solids by revolving or lofting profiles
+- [Build from Scratch](references/build-from-scratch.md) — Building BRep or Polyhedron from scratch (BRep3DBuilder, Polyhedron3DBuilder)
+- [Boolean Operations](references/boolean-operations.md) — Union, subtraction, and intersection of solids
+- [Intersections](references/intersections.md) — Calculating geometric intersections (curve-curve, curve-plane, solid-solid, solid-plane, ray-solid)
+- [Transformations](references/transformations.md) — Translation, rotation, scaling, reflection, projection, and composing transformations
+- [Fillet & Offset](references/fillet-offset.md) — Fillet edges/lines and offset curves/faces
+- [Measurement](references/measurement.md) — Length, area, volume calculation, center of gravity, comparison, and polyhedron validation/repair
+- [Hidden Calculation](references/hidden-calculation.md) — Projecting 3D geometry to 2D lines (visible/hidden edges)
+- [Tessellation](references/tessellation.md) — Converting BRep to Polyhedron via tessellation
