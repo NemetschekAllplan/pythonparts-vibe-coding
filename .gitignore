@@ -1,3 +1,4 @@
 .manual
 .scripts
 .old
+*.code-workspace
