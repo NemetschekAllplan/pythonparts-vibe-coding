@@ -8,10 +8,12 @@ A collection of **AI agent skills** that turn GitHub Copilot or Claude Code into
 agents/
     pythonpart-coder.agent.md   ← A specialized AI agent for PythonParts development
 skills/
-    coding-pythonpart/          ← Step-by-step workflow for creating a new PythonPart
-    property-palette/           ← How to design the PYP file and its parameters
+    create-new-pythonpart/      ← Step-by-step workflow for creating a new PythonPart
+    allplan-environment/        ← ALLPLAN version, framework paths, and file locations
+    ui-design/                  ← How to design the PYP file and its property palette
     pythonpart-script/          ← How to structure and write the PY file
-    environment-paths/          ← Where to place files in different ALLPLAN installations
+    allplan-elements/           ← How to create native ALLPLAN elements from geometry
+    geometry/                   ← How to create and manipulate ALLPLAN geometry
 ```
 
 The **agent** orchestrates the whole process. The **skills** are focused building blocks it calls when needed — and you can invoke them directly too.
@@ -44,6 +46,18 @@ your-project/
     └── skills/
 ```
 
+### With Codex
+
+Copy the `agents/` and `skills/` folders into a `.codex/` directory inside your project:
+
+```
+your-project/
+└── .codex/
+    ├── agents/
+    └── skills/
+```
+
+Then start a Codex task in your ALLPLAN project and describe the PythonPart you want to build. Codex can use the PythonPart Coder agent and the installed skills directly, such as `create-new-pythonpart`, `ui-design`, and `pythonpart-script`.
 Claude Code will automatically pick up the skills (invoke them with `/coding-pythonpart`, `/property-palette`, etc.) and the subagent definition.
 
 ## Typical workflow
