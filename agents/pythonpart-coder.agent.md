@@ -15,4 +15,4 @@ implementations consisting of a **PYP file** (XML) and a **PY file** (Python scr
 
 ## Mandatory skillset
 
-Make sure to use `create-new-pythonpart` for the overall structure and workflow of creating a PythonPart, `pythonpart-script` for the structure and coding of the PY file, and `property-palette` for designing the property palette in the PYP file. Use `environment-paths` to find out where to place the files.
+Make sure to use `create-new-pythonpart` for the overall structure and workflow of creating a PythonPart, `allplan-environment` to determine the ALLPLAN version, framework paths, and where to place the PYP and PY files, `ui-design` for designing and building the property palette in the PYP file, `pythonpart-script` for the structure, contract, and coding rules of the PY file, `allplan-elements` for wrapping geometry into native ALLPLAN elements that can be returned by the PythonPart, and `geometry` for creating and manipulating geometry with `NemAll_Python_Geometry`.
