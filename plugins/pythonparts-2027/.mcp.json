@@ -1,0 +1,23 @@
+{
+  "mcpServers": {
+    "pythonparts-local-mcp": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "--index", "https://test.pypi.org/simple",
+        "--index-strategy", "unsafe-best-match",
+        "pythonparts-mcp@latest",
+        "--allplan-version", "2027",
+        "--std-path", "${user_config.std_path}",
+        "--usr-path", "${user_config.usr_path}"
+      ],
+      "env": {
+        "UV_SYSTEM_CERTS": "true"
+      }
+    },
+    "pythonparts-knowledge-mcp": {
+      "type": "http",
+      "url": "https://pythonparts-mcp.allplan.com/2027/mcp"
+    }
+  }
+}

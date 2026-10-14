@@ -1,0 +1,22 @@
+{
+  "name": "pythonparts-2027",
+  "version": "2027.1.0",
+  "description": "PythonParts agents and MCP servers for ALLPLAN 2027",
+  "author": { "name": "ALLPLAN GmbH", "url": "https://www.allplan.com" },
+  "license": "MIT",
+  "keywords": ["allplan", "pythonparts", "bim", "2027"],
+  "userConfig": {
+    "std_path": {
+      "type": "directory",
+      "title": "ALLPLAN 2027 Std path",
+      "description": "Office standard (Std) directory of ALLPLAN 2027, e.g. C:\\Data\\Allplan\\Allplan 2027\\Std",
+      "required": true
+    },
+    "usr_path": {
+      "type": "directory",
+      "title": "ALLPLAN 2027 Usr path",
+      "description": "User (Usr) directory of ALLPLAN 2027, e.g. C:\\Users\\<you>\\Documents\\Nemetschek\\Allplan\\2027\\Usr\\Local",
+      "required": true
+    }
+  }
+}
