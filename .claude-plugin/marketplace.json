@@ -1,0 +1,14 @@
+{
+  "name": "allplan-pythonparts",
+  "owner": { "name": "ALLPLAN GmbH", "url": "https://www.allplan.com" },
+  "description": "Agents and MCP servers for ALLPLAN PythonParts development",
+  "plugins": [
+    {
+      "name": "pythonparts-2027",
+      "source": "./plugins/pythonparts-2027",
+      "description": "PythonParts agents and MCP servers for ALLPLAN 2027",
+      "category": "development",
+      "tags": ["allplan", "pythonparts", "bim", "2027"]
+    }
+  ]
+}
