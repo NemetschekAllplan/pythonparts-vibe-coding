@@ -4,7 +4,7 @@ Plugin marketplace `allplan-pythonparts` with one plugin per ALLPLAN major versi
 
 | Plugin | ALLPLAN | Clients |
 |---|---|---|
-| `pythonparts-2027` | 2027 | Claude Code (CLI and VS Code extension) |
+| `pythonparts-2027` | 2027 | Claude Code (CLI and VS Code extension), GitHub Copilot CLI |
 
 Each plugin adds the **pythonparts-planner** and **pythonparts-coder** agents and the
 `pythonparts-local-mcp` and `pythonparts-knowledge-mcp` MCP servers.
@@ -48,6 +48,24 @@ claude plugin install pythonparts-2027@allplan-pythonparts --config "std_path=C:
 
 The agents appear as `pythonparts-2027:pythonparts-planner` and `pythonparts-2027:pythonparts-coder`.
 
+### GitHub Copilot CLI
+
+Copilot CLI cannot ask for the Std and Usr paths at install time. Before installing, open
+`plugins/pythonparts-2027/mcp.json` and replace the two placeholders in `pythonparts-local-mcp`:
+
+| Placeholder | Replace with |
+|---|---|
+| `REPLACE-WITH-ALLPLAN-2027-STD-PATH` | `C:\Data\Allplan\Allplan 2027\Std` |
+| `REPLACE-WITH-ALLPLAN-2027-USR-PATH` | `C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local` |
+
+Then install the plugin from a local clone:
+
+```sh
+copilot plugin marketplace add NemetschekAllplan/pythonparts-vibe-coding
+copilot plugin install pythonparts-2027@allplan-pythonparts
+```
+
+
 ## Repository layout
 
 ```text
@@ -56,4 +74,7 @@ plugins/pythonparts-2027/
 ├── .claude-plugin/plugin.json         # Claude Code manifest, incl. userConfig for Std/Usr paths
 ├── .mcp.json                          # Claude Code MCP config
 ├── agents/                            # Claude Code agents
+├── mcp.json                           # Copilot CLI MCP config (placeholders for Std/Usr paths)
+├── plugin.json                        # Copilot CLI manifest
+└── com.github.copilot/agents/         # Copilot CLI agents
 ```
