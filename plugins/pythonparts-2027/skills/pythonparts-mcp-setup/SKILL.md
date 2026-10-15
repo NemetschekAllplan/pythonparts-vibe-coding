@@ -31,29 +31,18 @@ Pick the section that matches the client you are running in.
 
 ### GitHub Copilot (VS Code or CLI)
 
-1. **Detect suggestions.** Find likely paths on the user's machine with PowerShell. Do not show these commands to the user.
+1. **Ask for the paths.** Ask the user for their ALLPLAN 2027 Std and Usr paths. Do not try to detect them on the user's machine, and do not pre-fill them. Show the typical locations only as examples:
 
-   ```powershell
-   $setup = Get-ItemProperty "HKLM:\SOFTWARE\Nemetschek\Allplan\2027.0\Setup" -ErrorAction SilentlyContinue
-   if ($setup) { Join-Path "$($setup.NetDrive)$($setup.NetPath)" "Allplan 2027\Std" }
-   Join-Path ([Environment]::GetFolderPath('MyDocuments')) "Nemetschek\Allplan\2027\Usr\Local"
-   Join-Path $env:USERPROFILE "Documents\Nemetschek\Allplan\2027\Usr\Local"
-   ```
-
-   Keep only the candidates that exist (`Test-Path`). If nothing is found, continue without suggestions.
-
-2. **Ask for the paths.** Show the detected candidates as suggestions and ask the user to confirm them or enter their own:
-
-   | Path | Typical location |
+   | Path | Example |
    |---|---|
    | Std | `C:\Data\Allplan\Allplan 2027\Std` |
    | Usr | `C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local` |
 
-   If the user is unsure, tell them that ALLPLAN shows both paths in **Allmenu > Service > Windows Explorer**.
+   If the user is unsure, tell them that ALLPLAN shows both paths in **Allmenu > Service > Windows Explorer**. Use the paths exactly as the user enters them.
 
-3. **Write the configuration.** Edit `<plugin-root>/mcp.json` as described in [Edit rule](#edit-rule).
+2. **Write the configuration.** Edit `<plugin-root>/mcp.json` as described in [Edit rule](#edit-rule).
 
-4. **Ask the user to reload.** Tell the user:
+3. **Ask the user to reload.** Tell the user:
 
    > The local PythonParts MCP server has been configured. To activate it:
    >

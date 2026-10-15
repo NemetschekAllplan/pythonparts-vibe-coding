@@ -56,8 +56,8 @@ copilot plugin install pythonparts-2027@allplan-pythonparts
 ```
 
 Copilot cannot ask for the Std and Usr paths at install time. After installing, run `/pythonparts-mcp-setup`
-in Copilot chat (VS Code or CLI). The skill suggests the paths detected on your machine, asks you to
-confirm them, and writes them into the plugin's `mcp.json`. Then restart the `pythonparts-local-mcp`
+in Copilot chat (VS Code or CLI). The skill asks for your Std and Usr paths and writes them into the
+plugin's `mcp.json`. Then restart the `pythonparts-local-mcp`
 server: in VS Code, run **MCP: List Servers**; in Copilot CLI, restart the session.
 
 Run `/pythonparts-mcp-setup` again to change the paths, and after every plugin update, since an update
