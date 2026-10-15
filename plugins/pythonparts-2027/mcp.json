@@ -1,0 +1,19 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "pythonparts-local-mcp": {
+      "type": "stdio",
+      "command": "uvx",
+      "args": [
+        "pythonparts-mcp@latest",
+        "--allplan-version", "2027",
+        "--std-path", "REPLACE-WITH-ALLPLAN-STD-PATH",
+        "--usr-path", "REPLACE-WITH-ALLPLAN-USR-PATH"
+      ]
+    },
+    "pythonparts-knowledge-mcp": {
+      "type": "streamable-http",
+      "url": "https://pythonparts-mcp.allplan.com/2027/mcp"
+    }
+  }
+}
