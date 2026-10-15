@@ -50,20 +50,18 @@ The agents appear as `pythonparts-2027:pythonparts-planner` and `pythonparts-202
 
 ### GitHub Copilot CLI
 
-Copilot CLI cannot ask for the Std and Usr paths at install time. Before installing, open
-`plugins/pythonparts-2027/mcp.json` and replace the two placeholders in `pythonparts-local-mcp`:
-
-| Placeholder | Replace with |
-|---|---|
-| `REPLACE-WITH-ALLPLAN-2027-STD-PATH` | `C:\Data\Allplan\Allplan 2027\Std` |
-| `REPLACE-WITH-ALLPLAN-2027-USR-PATH` | `C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local` |
-
-Then install the plugin from a local clone:
-
 ```sh
 copilot plugin marketplace add NemetschekAllplan/pythonparts-vibe-coding
 copilot plugin install pythonparts-2027@allplan-pythonparts
 ```
+
+Copilot cannot ask for the Std and Usr paths at install time. After installing, run `/pythonparts-mcp-setup`
+in Copilot chat (VS Code or CLI). The skill suggests the paths detected on your machine, asks you to
+confirm them, and writes them into the plugin's `mcp.json`. Then restart the `pythonparts-local-mcp`
+server: in VS Code, run **MCP: List Servers**; in Copilot CLI, restart the session.
+
+Run `/pythonparts-mcp-setup` again to change the paths, and after every plugin update, since an update
+resets them.
 
 
 ## Repository layout
@@ -76,5 +74,6 @@ plugins/pythonparts-2027/
 ├── agents/                            # Claude Code agents
 ├── mcp.json                           # Copilot CLI MCP config (placeholders for Std/Usr paths)
 ├── plugin.json                        # Copilot CLI manifest
+├── skills/pythonparts-mcp-setup/          # /pythonparts-mcp-setup skill: writes Std/Usr paths into mcp.json
 └── com.github.copilot/agents/         # Copilot CLI agents
 ```
