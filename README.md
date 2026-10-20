@@ -1,22 +1,35 @@
 # ALLPLAN PythonParts agent plugins
 
+![GitHub License](https://img.shields.io/github/license/NemetschekAllplan/pythonparts-vibe-coding)
+![Release](https://img.shields.io/github/v/release/NemetschekAllplan/pythonparts-vibe-coding)
+![ALLPLAN](https://img.shields.io/badge/ALLPLAN-2027-blue)
+![Clients](https://img.shields.io/badge/clients-Claude_Code%20%7C%20Copilot%20%7C%20Codex-lightgrey)
+
 Agent plugins for developing ALLPLAN PythonParts with AI coding assistants. They work with Claude Code, Claude Desktop, GitHub Copilot (VS Code, CLI, and app), and OpenAI Codex.
 
-The marketplace `allplan-pythonparts` provides one plugin per ALLPLAN major version:
+The marketplace `allplan-pythonparts` provides one plugin per ALLPLAN major version. Currently, it includes the plugin for ALLPLAN 2027.
 
-| Plugin | ALLPLAN version |
+The ALLPLAN 2027 plugin includes:
+
+## Agents
+
+| Agent | Purpose |
 |---|---|
-| `pythonparts-2027` | 2027 |
+| `pythonparts-planner` | Plans a PythonPart before any code is written. |
+| `pythonparts-coder` | Implements PythonParts. |
 
-Each plugin includes:
+## MCP Servers
 
-| Component | Type | Purpose |
-|---|---|---|
-| `pythonparts-planner` | Agent | Plans a PythonPart before any code is written. |
-| `pythonparts-coder` | Agent | Implements PythonParts. |
-| `pythonparts-local-mcp` | MCP server | Runs locally with your ALLPLAN installation. Type checks code, runs snippets, and inspects the PythonParts API. |
-| `pythonparts-knowledge-mcp` | MCP server | Hosted PythonParts knowledge base. Requires sign-in with ALLPLAN Connect. |
-| `pythonparts-mcp-setup` | Skill | Sets the ALLPLAN Std and Usr paths for `pythonparts-local-mcp`. |
+| Server name | Purpose |
+|---|---|
+| `pythonparts-local-mcp` | Runs locally with your ALLPLAN installation. Type checks code, runs snippets, and inspects the PythonParts API. |
+| `pythonparts-knowledge-mcp` | Hosted PythonParts knowledge base. Requires sign-in with ALLPLAN Connect. |
+
+## Skills
+
+| Skill name | Purpose |
+|---|---|
+| `pythonparts-mcp-setup` | Sets the ALLPLAN Std and Usr paths for `pythonparts-local-mcp`. |
 
 ## Quickstart
 
@@ -45,7 +58,7 @@ In ALLPLAN, open **Allmenu > Service > File Explorer**:
 
 ### 3. Install and configure the plugin
 
-Claude Code asks for the Std and Usr paths during installation. Other clients can't, so you configure the paths with the `pythonparts-mcp-setup` skill after installation.
+Choose your AI coding assistant:
 
 <details>
 <summary>VS Code with GitHub Copilot</summary>
