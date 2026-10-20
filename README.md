@@ -45,7 +45,7 @@ In ALLPLAN, open **Allmenu > Service > File Explorer**:
 
 ### 3. Install and configure the plugin
 
-Claude clients ask for the Std and Usr paths during installation. Other clients can't, so you configure the paths with the `pythonparts-mcp-setup` skill after installation.
+Claude Code asks for the Std and Usr paths during installation. Other clients can't, so you configure the paths with the `pythonparts-mcp-setup` skill after installation.
 
 <details>
 <summary>VS Code with GitHub Copilot</summary>
@@ -93,15 +93,7 @@ claude plugin install pythonparts-2027@allplan-pythonparts --config "std_path=C:
 <details>
 <summary>Claude Desktop</summary>
 
-1. Open **Settings > Plugins > Add > Add Marketplace** and enter:
-
-   ```text
-   NemetschekAllplan/pythonparts-vibe-coding
-   ```
-
-2. Click **Sync** and wait for the plugin list to appear.
-3. Select `pythonparts-2027` and click **+** to install it.
-4. Enter your Std and Usr paths when prompted.
+Follow the steps for **Claude Code CLI** above.
 
 </details>
 
@@ -156,17 +148,3 @@ claude plugin install pythonparts-2027@allplan-pythonparts --config "std_path=C:
 
 > [!NOTE]
 > Updating or reinstalling the plugin resets paths configured with `pythonparts-mcp-setup`. Run the skill again afterwards. To change the paths later, repeat the configuration step for your client.
-
-## Repository layout
-
-```text
-.claude-plugin/marketplace.json          # Marketplace catalog
-plugins/pythonparts-2027/
-├── .claude-plugin/plugin.json           # Claude manifest, incl. userConfig for the Std and Usr paths
-├── .mcp.json                            # Claude MCP config
-├── agents/                              # Claude agents
-├── plugin.json                          # Agent Plugins 1.0 manifest (GitHub Copilot, OpenAI Codex)
-├── mcp.json                             # Agent Plugins 1.0 MCP config, with placeholders for the Std and Usr paths
-├── com.github.copilot/agents/           # GitHub Copilot agents
-└── skills/pythonparts-mcp-setup/        # Skill that writes the Std and Usr paths into mcp.json
-```
