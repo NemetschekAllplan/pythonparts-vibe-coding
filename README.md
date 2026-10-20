@@ -1,77 +1,163 @@
-# PythonParts Vibe Coding
+# ALLPLAN PythonParts agent plugins
 
-A collection of **AI agent skills** that turn GitHub Copilot or Claude Code into an expert **PythonParts developer** — so you can build parametric ALLPLAN extensions by describing what you want, rather than writing everything from scratch.
+![GitHub License](https://img.shields.io/github/license/NemetschekAllplan/pythonparts-vibe-coding)
+![Release](https://img.shields.io/github/v/release/NemetschekAllplan/pythonparts-vibe-coding)
+![ALLPLAN](https://img.shields.io/badge/ALLPLAN-2027-blue)
+![Clients](https://img.shields.io/badge/clients-Claude_Code%20%7C%20Copilot%20%7C%20Codex-lightgrey)
 
-## What's in this repo
+Agent plugins for developing ALLPLAN PythonParts with AI coding assistants. They work with Claude Code, Claude Desktop, GitHub Copilot (VS Code, CLI, and app), and OpenAI Codex.
 
-```
-agents/
-    pythonpart-coder.agent.md   ← A specialized AI agent for PythonParts development
-skills/
-    create-new-pythonpart/      ← Step-by-step workflow for creating a new PythonPart
-    allplan-environment/        ← ALLPLAN version, framework paths, and file locations
-    ui-design/                  ← How to design the PYP file and its property palette
-    pythonpart-script/          ← How to structure and write the PY file
-    allplan-elements/           ← How to create native ALLPLAN elements from geometry
-    geometry/                   ← How to create and manipulate ALLPLAN geometry
-```
+The marketplace `allplan-pythonparts` provides one plugin per ALLPLAN major version. Currently, it includes the plugin for ALLPLAN 2027.
 
-The **agent** orchestrates the whole process. The **skills** are focused building blocks it calls when needed — and you can invoke them directly too.
+The ALLPLAN 2027 plugin includes:
 
-> **This is a living project.** New skills covering more ALLPLAN features and use cases will be added over time. Watch or star the repo to stay updated.
+## Agents
 
-## How to use it
+| Agent | Purpose |
+|---|---|
+| `pythonparts-planner` | Plans a PythonPart before any code is written. |
+| `pythonparts-coder` | Implements PythonParts. |
 
-### With GitHub Copilot (VS Code)
+## MCP Servers
 
-Copy the `agents/` and `skills/` folders into a `.github/` directory inside your project:
+| Server name | Purpose |
+|---|---|
+| `pythonparts-local-mcp` | Runs locally with your ALLPLAN installation. Type checks code, runs snippets, and inspects the PythonParts API. |
+| `pythonparts-knowledge-mcp` | Hosted PythonParts knowledge base. Requires sign-in with ALLPLAN Connect. |
 
-```
-your-project/
-└── .github/
-    ├── agents/
-    └── skills/
-```
+## Skills
 
-Then open GitHub Copilot Chat, switch to **Agent mode**, and select the **PythonPart Coder** agent. Describe what you want to build and let it guide you.
+| Skill name | Purpose |
+|---|---|
+| `pythonparts-mcp-setup` | Sets the ALLPLAN Std and Usr paths for `pythonparts-local-mcp`. |
 
-### With Claude Code
+## Quickstart
 
-Copy the `agents/` and `skills/` folders into a `.claude/` directory inside your project:
+### 1. Install uv
 
-```
-your-project/
-└── .claude/
-    ├── agents/
-    └── skills/
+`pythonparts-local-mcp` runs with `uvx`. Install [uv](https://docs.astral.sh/uv/getting-started/installation/). On Windows, you can use [winget](https://learn.microsoft.com/en-us/windows/package-manager/winget/):
+
+```sh
+winget install astral-sh.uv
 ```
 
-### With Codex
+Check that `uvx` is available in a new terminal:
 
-Copy the `agents/` and `skills/` folders into a `.codex/` directory inside your project:
-
-```
-your-project/
-└── .codex/
-    ├── agents/
-    └── skills/
+```sh
+uvx -V
 ```
 
-Then start a Codex task in your ALLPLAN project and describe the PythonPart you want to build. Codex can use the PythonPart Coder agent and the installed skills directly, such as `create-new-pythonpart`, `ui-design`, and `pythonpart-script`.
-Claude Code will automatically pick up the skills (invoke them with `/coding-pythonpart`, `/property-palette`, etc.) and the subagent definition.
+### 2. Find your ALLPLAN Std and Usr paths
 
-## Typical workflow
+In ALLPLAN, open **Allmenu > Service > File Explorer**:
 
-1. Open your ALLPLAN project in VS Code
-2. Start the PythonPart Coder agent and describe your PythonPart (e.g. *"Create a parametric rectangular column with configurable width, depth, and height"*)
-3. The agent will ask clarifying questions, then generate both the PYP and PY files
-4. Copy the generated files to the correct ALLPLAN directories (the agent tells you where)
-5. Open ALLPLAN and test your PythonPart
+| Path | Allmenu entry | Example |
+|---|---|---|
+| Std | Office standard (STD) | `C:\Data\Allplan\Allplan 2027\Std` |
+| Usr | My own CAD documents (USR) | `C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local` |
 
-You don't need to understand every line of code to get started — but the generated code is clean and well-structured, so it's a good starting point if you want to learn.
+### 3. Install and configure the plugin
 
-## Requirements
+Choose your AI coding assistant:
 
-- **ALLPLAN** (2026 or newer recommended)
-- **VS Code** with the GitHub Copilot extension, or **Claude Code**
-- No Python installation required to get started — ALLPLAN ships its own Python runtime
+<details>
+<summary>VS Code with GitHub Copilot</summary>
+
+1. Click the button to install the plugin:
+
+   [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_PythonParts_2027-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3A%2F%2Fchat-plugin%2Finstall%3Fsource%3DTmVtZXRzY2hla0FsbHBsYW4vcHl0aG9ucGFydHMtdmliZS1jb2Rpbmc=%26plugin%3Dpythonparts-2027)
+
+2. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
+3. Open the Command Palette, run **MCP: List Servers**, and restart `pythonparts-local-mcp`.
+
+</details>
+
+<details>
+<summary>VS Code with Claude Code</summary>
+
+1. Click the button to install the plugin:
+
+   [![Install in Claude Code](https://img.shields.io/badge/Claude_Code-Install_PythonParts_2027-D97757?style=flat-square&logo=claude&logoColor=white)](https://vscode.dev/redirect?url=vscode%3A%2F%2Fanthropic.claude-code%2Finstall-plugin%3Fplugin%3Dpythonparts-2027%26marketplace%3DNemetschekAllplan%2Fpythonparts-vibe-coding)
+
+2. In the chat, run `/pythonparts-2027:pythonparts-mcp-setup` and follow the instructions to enter your Std and Usr paths.
+
+</details>
+
+<details>
+<summary>Claude Code CLI</summary>
+
+1. In your terminal, run:
+
+   ```sh
+   claude plugin marketplace add NemetschekAllplan/pythonparts-vibe-coding
+   claude plugin install pythonparts-2027@allplan-pythonparts
+   ```
+
+2. In Claude Code, run `/plugin configure pythonparts-2027@allplan-pythonparts` and enter your Std and Usr paths.
+
+To skip step 2, pass the paths during installation:
+
+```sh
+claude plugin install pythonparts-2027@allplan-pythonparts --config "std_path=C:\Data\Allplan\Allplan 2027\Std" --config "usr_path=C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local"
+```
+
+</details>
+
+<details>
+<summary>Claude Desktop</summary>
+
+Follow the steps for **Claude Code CLI** above.
+
+</details>
+
+<details>
+<summary>GitHub Copilot CLI</summary>
+
+1. In your terminal, run:
+
+   ```sh
+   copilot plugin marketplace add NemetschekAllplan/pythonparts-vibe-coding
+   copilot plugin install pythonparts-2027@allplan-pythonparts
+   ```
+
+2. In a Copilot CLI session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
+3. Restart the Copilot CLI session.
+
+</details>
+
+<details>
+<summary>GitHub Copilot app</summary>
+
+1. Click the button to add the marketplace:
+
+   [![Add marketplace to the GitHub Copilot app](https://img.shields.io/badge/Copilot_app-Add_marketplace-24292F?style=flat-square&logo=github&logoColor=white)](ghapp://plugins/marketplace/add?source=NemetschekAllplan%2Fpythonparts-vibe-coding)
+
+   Alternatively, go to **Customize > Plugins**, click the marketplace settings icon next to the marketplace dropdown, and add `NemetschekAllplan/pythonparts-vibe-coding`.
+
+2. In **Customize > Plugins**, find `pythonparts-2027` and click **Install**.
+3. In a session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
+4. Start a new session.
+
+</details>
+
+<details>
+<summary>OpenAI Codex</summary>
+
+1. In your terminal, run:
+
+   ```sh
+   codex plugin marketplace add NemetschekAllplan/pythonparts-vibe-coding
+   codex plugin add pythonparts-2027@allplan-pythonparts
+   ```
+
+2. Start a new Codex session, run `$pythonparts-mcp-setup`, and enter your Std and Usr paths.
+3. Start a new Codex session.
+
+</details>
+
+### 4. Sign in to ALLPLAN Connect
+
+`pythonparts-knowledge-mcp` requires sign-in with your ALLPLAN Connect account. Your client prompts you when it first connects to the server. In Claude Code, run `/mcp` and authenticate the server.
+
+> [!NOTE]
+> Updating or reinstalling the plugin resets paths configured with `pythonparts-mcp-setup`. Run the skill again afterwards. To change the paths later, repeat the configuration step for your client.
