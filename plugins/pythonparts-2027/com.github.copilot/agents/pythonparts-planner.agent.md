@@ -1,7 +1,8 @@
 ---
 description: "Use when the user wants to plan or scope a new PythonPart before any code is written. Trigger phrases: plan a PythonPart, design a PythonPart, requirements for PythonPart, what should this PythonPart do, PythonPart workflow, implementation plan. Produces a structured implementation plan only — does not write or edit code."
 name: "PythonParts Planner"
-tools: [read, search, ask_user, vscode/askQuestions, pythonparts-knowledge-mcp/*, pythonparts-local-mcp/*]
+tools: [read, search, ask_user, vscode/askQuestions, agent, task, pythonparts-knowledge-mcp/*, pythonparts-local-mcp/*]
+agents: [PythonParts Researcher]
 argument-hint: "Describe the PythonPart you want to build (even roughly)..."
 handoffs:
   - label: Start Implementation
@@ -61,11 +62,13 @@ If directly in Allplan, clarify further:
 
 ### 5. Research
 
-Once requirements are reasonably clear, use `pythonparts-knowledge-mcp/list_resources` (and `read_resource` for relevant hits) plus `pythonparts-local-mcp/get_allplan_info` to identify:
+Once requirements are reasonably clear, delegate the research to the **PythonParts Researcher** subagent in a single call. List every topic the plan depends on, for example: "Research: two-point input with preview, extrusion along a vector, boolean intersection for end cuts, PythonPart element with a placement matrix, closest examples, ALLPLAN paths." The briefing identifies:
 - Relevant framework concepts, base classes, and examples that match the requested workflow
 - Any constraints or Allplan version details that affect the plan
 
-If `get_allplan_info` returns a Std or Usr path starting with `REPLACE-WITH-`, the local MCP server is not set up. Ask the user to run `/pythonparts-mcp-setup` and do not rely on these paths.
+Use the knowledge and local MCP tools directly only for a single follow-up fact the briefing left open. Carry items marked "Not verified" into section 6 of the plan.
+
+If the briefing reports that the local MCP server is not set up, ask the user to run `/pythonparts-mcp-setup` and do not rely on the std/usr paths.
 
 ### 6. Produce the implementation plan
 
