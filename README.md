@@ -17,6 +17,7 @@ The ALLPLAN 2027 plugin includes:
 |---|---|
 | `pythonparts-planner` | Plans a PythonPart before any code is written. |
 | `pythonparts-coder` | Implements PythonParts. |
+| `pythonparts-researcher` | Answers framework questions for the planner and coder with a short, source-cited briefing. Does not edit files. |
 
 ## MCP Servers
 
