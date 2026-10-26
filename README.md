@@ -68,6 +68,8 @@ Choose your AI coding assistant:
 
    [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_PythonParts_2027-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3A%2F%2Fchat-plugin%2Finstall%3Fsource%3DTmVtZXRzY2hla0FsbHBsYW4vcHl0aG9ucGFydHMtdmliZS1jb2Rpbmc=%26plugin%3Dpythonparts-2027)
 
+   Alternatively, in the VS Code command input (**Ctrl+Shift+P** or **Cmd+Shift+P** on macOS), type **Chat: Install Plugin from Source**, paste `NemetschekAllplan/pythonparts-vibe-coding` and select `pythonparts-2027` plugin.
+
 2. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
 
 </details>
