@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "pythonparts-2027",
-  "version": "2027.0.1-beta.1",
+  "version": "2027.0.1-beta.2",
   "description": "PythonParts agents and MCP servers for ALLPLAN 2027",
   "author": { "name": "ALLPLAN GmbH" },
   "license": "MIT",

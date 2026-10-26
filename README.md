@@ -17,6 +17,7 @@ The ALLPLAN 2027 plugin includes:
 |---|---|
 | `pythonparts-planner` | Plans a PythonPart before any code is written. |
 | `pythonparts-coder` | Implements PythonParts. |
+| `pythonparts-researcher` | Answers framework questions for the planner and coder with a short, source-cited briefing. Does not edit files. |
 
 ## MCP Servers
 
@@ -68,7 +69,6 @@ Choose your AI coding assistant:
    [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_PythonParts_2027-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3A%2F%2Fchat-plugin%2Finstall%3Fsource%3DTmVtZXRzY2hla0FsbHBsYW4vcHl0aG9ucGFydHMtdmliZS1jb2Rpbmc=%26plugin%3Dpythonparts-2027)
 
 2. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
-3. Open the Command Palette, run **MCP: List Servers**, and restart `pythonparts-local-mcp`.
 
 </details>
 
@@ -121,7 +121,7 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. In a Copilot CLI session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
-3. Restart the Copilot CLI session.
+3. Start a new Copilot CLI session for the changes to take effect.
 
 </details>
 
