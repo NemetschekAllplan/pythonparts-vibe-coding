@@ -64,13 +64,24 @@ Choose your AI coding assistant:
 <details>
 <summary>VS Code with GitHub Copilot</summary>
 
-1. Click the button to install the plugin:
+1. Paste this link in your browser:
 
-   [![Install in VS Code](https://img.shields.io/badge/VS_Code-Install_PythonParts_2027-0098FF?style=flat-square&logo=visualstudiocode&logoColor=white)](https://vscode.dev/redirect?url=vscode%3A%2F%2Fchat-plugin%2Finstall%3Fsource%3DTmVtZXRzY2hla0FsbHBsYW4vcHl0aG9ucGFydHMtdmliZS1jb2Rpbmc=%26plugin%3Dpythonparts-2027)
+```txt
+vscode://chat-plugin/install?source=NemetschekAllplan%2Fpythonparts-vibe-coding&plugin=pythonparts-2027
+```
 
-   Alternatively, in the VS Code command input (**Ctrl+Shift+P** or **Cmd+Shift+P** on macOS), type **Chat: Install Plugin from Source**, paste `NemetschekAllplan/pythonparts-vibe-coding` and select `pythonparts-2027` plugin.
+2. Confirm the installation of the plugin.
+3. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
 
-2. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
+**Alternatively:**
+
+1. In the VS Code command input (**Ctrl+Shift+P** or **Cmd+Shift+P** on macOS), type **Chat: Manage Plugin Marketplaces**
+2. Select **Add Marketplace...**
+3. Paste `NemetschekAllplan/pythonparts-vibe-coding`
+4. Select the newly added `allplan-pythonparts` marketplace an then **Browse**.
+5. Install the `pythonparts-2027` plugin.
+6. In the chat, run `/pythonparts-mcp-setup` and enter your Std and Usr paths.
+
 
 </details>
 
