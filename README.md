@@ -15,7 +15,7 @@ The ALLPLAN 2027 plugin includes:
 
 | Agent | Purpose |
 |---|---|
-| `pythonparts-planner` | Plans a PythonPart before any code is written. |
+| `pythonparts-planner` | Plans a PythonPart before any code is written. Never edits code. |
 | `pythonparts-coder` | Implements PythonParts. |
 | `pythonparts-researcher` | Answers framework questions for the planner and coder with a short, source-cited briefing. Does not edit files. |
 
@@ -31,6 +31,7 @@ The ALLPLAN 2027 plugin includes:
 | Skill name | Purpose |
 |---|---|
 | `pythonparts-mcp-setup` | Sets the ALLPLAN Std and Usr paths for `pythonparts-local-mcp`. |
+| `plan-pythonpart` | Clarifies the requirements of a new PythonPart and produces an implementation plan. Works with any agent, not only `pythonparts-planner`. |
 
 ## Quickstart
 
@@ -162,6 +163,8 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. Start a new Codex session, run `$pythonparts-mcp-setup`, and enter your Std and Usr paths.
+
+Codex doesn't load the plugin's agents. To plan a PythonPart, run `$plan-pythonpart` or ask Codex to plan one.
 
 </details>
 
