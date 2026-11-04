@@ -1,7 +1,7 @@
 ---
 description: "Use when the user wants to plan or scope a new PythonPart before any code is written. Trigger phrases: plan a PythonPart, design a PythonPart, requirements for PythonPart, what should this PythonPart do, PythonPart workflow, implementation plan. Produces a structured implementation plan only — does not write or edit code."
 name: "PythonParts Planner"
-tools: [read, search, agent, ask_user, vscode/askQuestions, pythonparts-knowledge-mcp/*, pythonparts-local-mcp/get_allplan_info]
+tools: [read, search, agent, ask_user, vscode/askQuestions, pythonparts-knowledge-mcp/*, pythonparts-local-mcp/get_allplan_info, pythonparts-local-mcp/set_allplan_paths]
 agents: [PythonParts Researcher]
 disable-model-invocation: true
 argument-hint: "Describe the PythonPart you want to build (even roughly)..."
@@ -81,7 +81,7 @@ Once requirements are reasonably clear, delegate the research to the **PythonPar
 
 Use the `pythonparts-knowledge-mcp` tools or `get_allplan_info` from `pythonparts-local-mcp` directly only for a single follow-up fact the briefing left open. Carry items marked "Not verified" into section 6 of the plan.
 
-If the briefing reports that the local MCP server is not set up, ask the user to run `/pythonparts-mcp-setup` and do not rely on the std/usr paths.
+If the briefing reports that the local MCP server is not set up, or `get_allplan_info` returns `Not set. Use set_allplan_paths()` for the Std or Usr path, use the `pythonparts-mcp-setup` skill to set the paths. Then verify with `get_allplan_info`. Use the paths only once they are set. If you have no question tool, follow the rule in "Asking questions" and ask for the Std and Usr paths.
 
 ### 6. Produce the implementation plan
 
