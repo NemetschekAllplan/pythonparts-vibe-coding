@@ -134,7 +134,6 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. In a Copilot CLI session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
-3. Start a new Copilot CLI session for the changes to take effect.
 
 </details>
 
@@ -149,7 +148,6 @@ Follow the steps for **Claude Code CLI** above.
 
 2. In **Customize > Plugins**, find `pythonparts-2027` and click **Install**.
 3. In a session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
-4. Start a new session.
 
 </details>
 
@@ -164,13 +162,9 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. Start a new Codex session, run `$pythonparts-mcp-setup`, and enter your Std and Usr paths.
-3. Start a new Codex session.
 
 </details>
 
 ### 4. Sign in to ALLPLAN Connect
 
 `pythonparts-knowledge-mcp` requires sign-in with your ALLPLAN Connect account. Your client prompts you when it first connects to the server. In Claude Code, run `/mcp` and authenticate the server.
-
-> [!NOTE]
-> Updating or reinstalling the plugin resets paths configured with `pythonparts-mcp-setup`. Run the skill again afterwards. To change the paths later, repeat the configuration step for your client.
