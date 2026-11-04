@@ -1,11 +1,11 @@
 ---
 name: pythonparts-mcp-setup
-description: Sets up or reconfigures the `pythonparts-local-mcp` server with the ALLPLAN 2027 Std and Usr paths. Use when the user runs /pythonparts-mcp-setup, wants to set or change their ALLPLAN Std or Usr path, or when `get_allplan_info` of `pythonparts-local-mcp` returns a Std or Usr path starting with `REPLACE-WITH-`. You MUST run this skill before any PythonParts work that relies on `pythonparts-local-mcp` (type checks, snippets, symbol inspection, ALLPLAN paths) if the server is not set up.
+description: Sets up or reconfigures the `pythonparts-local-mcp` server with the ALLPLAN 2027 Std and Usr paths. Use when the user runs /pythonparts-mcp-setup, wants to set or change their ALLPLAN Std or Usr path, or when `get_allplan_info` of `pythonparts-local-mcp` returns `Not set. Use set_allplan_paths()` for the Std or Usr path. You MUST run this skill before any PythonParts work that relies on `pythonparts-local-mcp` (type checks, snippets, symbol inspection, ALLPLAN paths) if the server is not set up.
 ---
 
 # PythonParts local MCP setup
 
-The `pythonparts-local-mcp` server needs the user's ALLPLAN 2027 **Std** (office standard) and **Usr** (user) directories. Claude Code asks for them when the plugin is installed. GitHub Copilot (VS Code and CLI) cannot, so the plugin ships with placeholders and this skill writes the real paths into the plugin's MCP configuration.
+The `pythonparts-local-mcp` server needs the user's ALLPLAN 2027 **Std** (office standard) and **Usr** (user) directories. Claude Code asks for them when the plugin is installed. In the other clients, this skill asks for them and saves them with the `set_allplan_paths` tool of the server. The server stores them in the plugin data directory (`PLUGIN_DATA/config.json`), so they survive plugin updates.
 
 ## Determine the server state
 
@@ -13,9 +13,9 @@ Call `get_allplan_info` of `pythonparts-local-mcp` and look at `paths.std` and `
 
 | Result | State |
 |---|---|
-| A path starts with `REPLACE-WITH-` | **not-setup** |
+| A path is `Not set. Use set_allplan_paths()` | **not-setup** |
 | Both paths are set | **working** |
-| The tool is not available or the call fails | Read `<plugin-root>/mcp.json`. If it contains `REPLACE-WITH-`, the state is **not-setup**, otherwise **not-working**. |
+| The tool is not available or the call fails | **not-working** |
 
 Then act on the state:
 
@@ -29,7 +29,7 @@ Do not suggest workarounds that bypass the MCP server, such as hard-coding paths
 
 Pick the section that matches the client you are running in.
 
-### GitHub Copilot (VS Code or CLI)
+### GitHub Copilot and OpenAI Codex
 
 1. **Ask for the paths.** Ask the user for their ALLPLAN 2027 Std and Usr paths. Do not try to detect them on the user's machine, and do not pre-fill them. Show the typical locations only as examples:
 
@@ -38,20 +38,19 @@ Pick the section that matches the client you are running in.
    | Std | `C:\Data\Allplan\Allplan 2027\Std` |
    | Usr | `C:\Users\<you>\Documents\Nemetschek\Allplan\2027\Usr\Local` |
 
-   If the user is unsure, tell them that ALLPLAN shows both paths in **Allmenu > Service > Windows Explorer**. Use the paths exactly as the user enters them.
+   If the user is unsure, tell them that ALLPLAN shows both paths in **Allmenu > Service > File Explorer**. If the user wants to change only one path, ask only for that one. Use the paths exactly as the user enters them.
 
-2. **Write the configuration.** Edit `<plugin-root>/mcp.json` as described in [Edit rule](#edit-rule).
+2. **Save the paths.** Call `set_allplan_paths` of `pythonparts-local-mcp` with `std_path` and `usr_path`. After the tool is called, the paths are active immediately.
 
-3. **Ask the user to reload.** Tell the user:
+   - If the tool rejects a path (it is not an existing directory), tell the user which one and ask again. Nothing was saved in that case.
+   - If the response has `data.warnings`, relay them to the user.
 
-   > The local PythonParts MCP server has been configured. To activate it:
-   >
-   > - **VS Code**: open the Command Palette, run **MCP: List Servers**, and restart `pythonparts-local-mcp`.
-   > - **Copilot CLI**: restart the session.
-   >
-   > Updating or reinstalling the plugin resets this configuration. Run `/pythonparts-mcp-setup` again afterwards.
+3. **Check the result.**
 
-   Then stop. Do not call `pythonparts-local-mcp` tools until the user has reloaded.
+   - `data.persisted` is `true`: tell the user that this was a one-time setup and it will survive plugin updates.
+   - `data.persisted` is `false`: the paths are active only for the current session. Follow [Fallback without persistence](#fallback-without-persistence).
+
+   Then call `get_allplan_info` to confirm and continue with the user's original request.
 
 ### Claude Code
 
@@ -61,25 +60,30 @@ Claude Code stores the paths as plugin options, not in `mcp.json`. Do not edit a
 
 Then stop.
 
-## Edit rule
+## Fallback without persistence
+
+Use this only when `set_allplan_paths` reports `data.persisted` as `false`, which means the host does not provide a plugin data directory.
 
 `<plugin-root>` is the directory that contains this skill's `skills` folder. Derive it by removing `skills/pythonparts-mcp-setup/SKILL.md` from this file's path. Edit `<plugin-root>/mcp.json` only. Never edit `<plugin-root>/.mcp.json`, which belongs to Claude Code.
 
-In the `pythonparts-local-mcp` entry, replace only the argument that follows `--std-path` and the argument that follows `--usr-path`. Leave everything else untouched, including `--allplan-version` and the `pythonparts-knowledge-mcp` entry.
+In the `pythonparts-local-mcp` entry, add `--std-path` and `--usr-path` with the paths to `args`, after `--allplan-version`. Leave everything else untouched, including the `pythonparts-knowledge-mcp` entry. If the arguments already exist, replace only their values.
 
-Escape each backslash as `\\` in JSON. Before and after (example):
-
-```json
-"--std-path", "REPLACE-WITH-ALLPLAN-STD-PATH",
-"--usr-path", "REPLACE-WITH-ALLPLAN-USR-PATH"
-```
+Escape each backslash as `\\` in JSON. Example:
 
 ```json
-"--std-path", "C:\\Data\\Allplan\\Allplan 2027\\Std",
-"--usr-path", "C:\\Users\\jdoe\\Documents\\Nemetschek\\Allplan\\2027\\Usr\\Local"
+"args": [
+  "pythonparts-mcp@latest",
+  "--allplan-version", "2027",
+  "--std-path", "C:\\Data\\Allplan\\Allplan 2027\\Std",
+  "--usr-path", "C:\\Users\\jdoe\\Documents\\Nemetschek\\Allplan\\2027\\Usr\\Local"
+]
 ```
 
-After editing, parse the file as JSON (for example, with `ConvertFrom-Json`) to confirm it is still valid.
+After editing, parse the file as JSON (for example, with `ConvertFrom-Json`) to confirm it is still valid. Then tell the user:
+
+> The paths could not be saved in a plugin data directory, so I wrote them into the `args` of `pythonparts-local-mcp` in `<plugin-root>/mcp.json`. Arguments take precedence over `config.json`. To activate them, restart the server (**VS Code**: **MCP: List Servers** > restart `pythonparts-local-mcp`; **Copilot CLI** and **Codex**: start a new session). Updating or reinstalling the plugin resets this change. Run `/pythonparts-mcp-setup` again afterwards.
+
+The current session already uses the paths set by `set_allplan_paths`, so you can continue working without waiting for the restart.
 
 ## Troubleshooting
 
