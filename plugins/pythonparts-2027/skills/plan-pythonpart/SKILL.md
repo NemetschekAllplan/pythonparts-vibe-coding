@@ -125,4 +125,4 @@ Return exactly one of:
 
 ## After the plan
 
-Ask the user to confirm or adjust the plan. Do not implement it as part of this skill. Once the user accepts it, the plan is the input for the PythonParts coder agent (`pythonparts-coder` in Claude Code, **PythonParts Coder** in GitHub Copilot).
+Ask the user to confirm or adjust the plan. Do not implement it as part of this skill. Once the user accepts it, the plan is the input for the `implement-pythonpart` skill or the PythonParts coder agent (`pythonparts-coder` in Claude Code, **PythonParts Coder** in GitHub Copilot).

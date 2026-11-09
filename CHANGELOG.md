@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [2027.0.1-beta.4]
+
+### Added
+
+- `implement-pythonpart` skill with the PythonPart implementation workflow, type-check rules, and definition of done, so any agent can implement a PythonPart. In OpenAI Codex, which can't load the plugin's agents, this is the way to implement a PythonPart.
+
+### Changed
+
+- `pythonparts-coder` loads the `implement-pythonpart` skill instead of defining the implementation workflow itself. It keeps its tool restrictions: no terminal commands, and delegation only to `pythonparts-researcher`.
+- The Claude Code and GitHub Copilot versions of `pythonparts-coder` now follow the same workflow. The Claude Code version also asks open questions, runs `pythonparts-mcp-setup` when the Std or Usr path is not set, and replies with "Plan required:" when no plan exists.
+- `plan-pythonpart` names the `implement-pythonpart` skill as the next step after an accepted plan.
+
 ## [2027.0.1-beta.3]
 
 ### Added
