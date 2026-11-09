@@ -6,8 +6,16 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
 ## [Unreleased]
 
+## [2027.0.1-beta.3]
+
+### Added
+
+- `plan-pythonpart` skill with the PythonPart planning workflow and plan template, so any agent can plan a PythonPart. In OpenAI Codex, which can't load the plugin's agents, this is the way to plan a PythonPart.
+
 ### Changed
 
+- `pythonparts-planner` loads the `plan-pythonpart` skill instead of defining the planning workflow itself. It keeps its read-only tools and the handoff to `pythonparts-coder`.
+- `pythonparts-coder` recommends the `pythonparts-planner` agent or the `plan-pythonpart` skill when no plan exists.
 - The ALLPLAN Std and Usr paths are saved once with the new `set_allplan_paths` tool of `pythonparts-local-mcp` and survive plugin updates. You no longer need to run `pythonparts-mcp-setup` again after an update.
 - `pythonparts-mcp-setup` asks for the paths and calls `set_allplan_paths` instead of editing `mcp.json`. The paths are active immediately, without a reload. If the host provides no plugin data directory, the skill falls back to writing the paths into the `args` of `pythonparts-local-mcp`.
 - `mcp.json` no longer contains the `REPLACE-WITH-` placeholders and the `--std-path` and `--usr-path` arguments.
