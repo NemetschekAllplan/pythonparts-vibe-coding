@@ -6,9 +6,7 @@
       "command": "uvx",
       "args": [
         "pythonparts-mcp@latest",
-        "--allplan-version", "2027",
-        "--std-path", "REPLACE-WITH-ALLPLAN-STD-PATH",
-        "--usr-path", "REPLACE-WITH-ALLPLAN-USR-PATH"
+        "--allplan-version", "2027"
       ]
     },
     "pythonparts-knowledge-mcp": {

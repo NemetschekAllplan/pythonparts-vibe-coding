@@ -15,7 +15,7 @@ The ALLPLAN 2027 plugin includes:
 
 | Agent | Purpose |
 |---|---|
-| `pythonparts-planner` | Plans a PythonPart before any code is written. |
+| `pythonparts-planner` | Plans a PythonPart before any code is written. Never edits code. |
 | `pythonparts-coder` | Implements PythonParts. |
 | `pythonparts-researcher` | Answers framework questions for the planner and coder with a short, source-cited briefing. Does not edit files. |
 
@@ -31,6 +31,8 @@ The ALLPLAN 2027 plugin includes:
 | Skill name | Purpose |
 |---|---|
 | `pythonparts-mcp-setup` | Sets the ALLPLAN Std and Usr paths for `pythonparts-local-mcp`. |
+| `plan-pythonpart` | Clarifies the requirements of a new PythonPart and produces an implementation plan. Works with any agent, not only `pythonparts-planner`. |
+| `implement-pythonpart` | Implements an accepted plan or a clearly specified change to a PythonPart and type checks the code. Works with any agent, not only `pythonparts-coder`. |
 
 ## Quickstart
 
@@ -134,7 +136,6 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. In a Copilot CLI session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
-3. Start a new Copilot CLI session for the changes to take effect.
 
 </details>
 
@@ -149,7 +150,6 @@ Follow the steps for **Claude Code CLI** above.
 
 2. In **Customize > Plugins**, find `pythonparts-2027` and click **Install**.
 3. In a session, run `/pythonparts-2027:pythonparts-mcp-setup` and enter your Std and Usr paths.
-4. Start a new session.
 
 </details>
 
@@ -164,13 +164,11 @@ Follow the steps for **Claude Code CLI** above.
    ```
 
 2. Start a new Codex session, run `$pythonparts-mcp-setup`, and enter your Std and Usr paths.
-3. Start a new Codex session.
+
+Codex doesn't load the plugin's agents. To plan a PythonPart, run `$plan-pythonpart` or ask Codex to plan one. To implement an accepted plan, run `$implement-pythonpart` or ask Codex to implement it.
 
 </details>
 
 ### 4. Sign in to ALLPLAN Connect
 
 `pythonparts-knowledge-mcp` requires sign-in with your ALLPLAN Connect account. Your client prompts you when it first connects to the server. In Claude Code, run `/mcp` and authenticate the server.
-
-> [!NOTE]
-> Updating or reinstalling the plugin resets paths configured with `pythonparts-mcp-setup`. Run the skill again afterwards. To change the paths later, repeat the configuration step for your client.

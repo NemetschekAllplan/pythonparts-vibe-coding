@@ -26,7 +26,7 @@ MCP tools can be deferred: listed, but not callable until loaded. If a tool you 
 
 1. Call `list_resources` from the `pythonparts-knowledge-mcp` server once, then read only the resources that match the requested topics (interaction, geometry, PythonPart element, palette controls, native elements, ...) with `read_resource`.
 2. Find the 1-3 closest examples. Load them with `get_example` from the `pythonparts-knowledge-mcp` server, using only example paths referenced by the knowledge base resources, or read them from the local example folders (`<usr>/Library/Examples/PythonParts` for `.pyp`, `<usr>/Library/PythonPartsExamples` for `.py`). Read an example only if it matches the requested workflow.
-3. Call `get_allplan_info` from the `pythonparts-local-mcp` server. If a std or usr path starts with `REPLACE-WITH-`, report that the local MCP server is not set up and the `pythonparts-mcp-setup` skill is needed.
+3. Call `get_allplan_info` from the `pythonparts-local-mcp` server. If a std or usr path is `Not set. Use set_allplan_paths()`, state in the briefing, as the first line of the environment section, that the local MCP server is not set up and the caller must run the `pythonparts-mcp-setup` skill. Do not run the skill yourself - that's not your responsibility.
 4. If a signature is uncertain, check it with `inspect_symbol` from the `pythonparts-local-mcp` server.
 5. If you need to know what a Python framework function actually does (defaults, side effects, existing helpers), read its source with `run_snippet_in_sandbox` from the `pythonparts-local-mcp` server:
    ```python
